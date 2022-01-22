@@ -1,0 +1,138 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+.app {
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(26, 27, 92),
+		rgb(43, 89, 128)
+	);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	padding: 0 5rem;
+	border-radius: 2rem;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 1rem;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	font-size: large;
+	font-weight: bold;
+	background: transparent;
+	border-radius: 1rem;
+	outline: none;
+	border: solid #333 4px;
+	color: #333;
+}
+
+button:hover {
+	background: #333;
+	color: #fff;
+}
+
+.turn-score {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.grid {
+	margin: 40px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.card {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	border-radius: 10px;
+	/* border: solid #dd2222 4px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 0;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(26, 27, 92),
+		rgb(43, 89, 128)
+	);
+}
+
+.card-front,
+.card-back {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.card-content {
+	width: 180px;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-radius: 50%;
+	font-size: 5rem;
+	font-weight: bold;
+}
+
+.card-front {
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(26, 27, 92),
+		rgb(43, 89, 128)
+	);
+	transform: rotateY(90deg);
+	transition: all ease-in 0.2s;
+}
+
+.flipped .card-front {
+	transform: rotateY(0deg);
+	transition-delay: 0.2s;
+}
+
+.card-back {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(26, 27, 92),
+		rgb(43, 89, 128)
+	);
+}
